@@ -1,6 +1,9 @@
-name: Pull request
+name: Documentation Generation
 
-on: pull_request
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   generate_doc:
@@ -11,4 +14,6 @@ jobs:
         submodules: true
         fetch-depth: 0
     - name: Generate Actions Documentation
-      uses: f0rmiga/doc-generator-actions/github-actions@master
+      uses: SUSE/doc-generator-actions/github-actions@v0.1.0
+      with:
+        github_token: '${{ github.token }}'
