@@ -27,13 +27,11 @@ inputs:
     required: false
   condition:
     description: The condition for the kubectl wait command.
-    required: false
     default: ready
   timeout:
     description: |
       A timeout for the waiting. Optional suffixes 's', 'm' and 'h' can be used
       respectively for seconds, minutes and hours.
-    required: false
     default: 2m
 outputs: {}
 runs:
